@@ -1,0 +1,3 @@
+plugins {
+    id 'org.training.model.java-common-conventions'
+}

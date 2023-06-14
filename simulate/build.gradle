@@ -1,0 +1,23 @@
+plugins {
+    id 'org.training.model.java-common-conventions'
+    id 'org.springframework.boot' version "${springBootVersion}"
+    id 'org.openjfx.javafxplugin' version "${javaFxVersion}"
+}
+
+dependencies {
+    implementation project(':model')
+    implementation project(':data')
+    implementation project(':analysis')
+    implementation "org.springframework.boot:spring-boot-starter:${springBootVersion}"
+    implementation "redis.clients:jedis:${jedisVersion}"
+    runtimeOnly "org.postgresql:postgresql:${postgresqlVersion}"
+}
+
+javafx {
+    version = '13'
+    modules = [ 'javafx.controls', 'javafx.fxml' ]
+}
+
+tasks.named('bootJar') {
+    enabled = true
+}

@@ -1,0 +1,15 @@
+plugins {
+    id 'org.training.model.java-common-conventions'
+    id 'org.springframework.boot' version "${springBootVersion}"
+}
+
+dependencies {
+    implementation project(':model')
+    implementation project(':data')
+    implementation "redis.clients:jedis:${jedisVersion}"
+    runtimeOnly "org.postgresql:postgresql:${postgresqlVersion}"
+}
+
+tasks.named('bootJar') {
+    enabled = false
+}

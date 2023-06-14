@@ -1,0 +1,26 @@
+plugins {
+    // Apply the java Plugin to add support for Java.
+    id 'java'
+    id 'java-library'
+}
+
+repositories {
+    // Use Maven Central for resolving dependencies.
+    mavenCentral()
+}
+
+dependencies {
+    implementation "org.json:json:${orgJsonVersion}"
+    compileOnly "org.projectlombok:lombok:${lombokVersion}"
+	annotationProcessor "org.projectlombok:lombok:${lombokVersion}"
+}
+
+testing {
+    suites {
+        // Configure the built-in test suite
+        test {
+            // Use JUnit Jupiter test framework
+            useJUnitJupiter('5.9.1')
+        }
+    }
+}

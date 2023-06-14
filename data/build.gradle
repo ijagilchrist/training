@@ -1,0 +1,11 @@
+plugins {
+    id 'org.training.model.java-common-conventions'
+}
+
+dependencies {
+    implementation project(':model')
+    implementation "redis.clients:jedis:${jedisVersion}"
+    implementation "com.fasterxml.jackson.dataformat:jackson-dataformat-yaml:${jacksonVersion}"
+    implementation "com.fasterxml.jackson.datatype:jackson-datatype-jsr310:${jacksonVersion}"
+    runtimeOnly "org.postgresql:postgresql:${postgresqlVersion}"
+}
