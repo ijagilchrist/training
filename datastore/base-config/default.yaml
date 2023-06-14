@@ -1,0 +1,20 @@
+---
+instrument: "DEFAULT"
+type: "LONG"
+interval: 15
+tradeFrom: "05:00"
+tradeTo: "22:00"
+tradingPeriod: 360
+takeProfit: 100.0
+stopLoss: -100.0
+filters:
+  yi:
+    lower: 0.0
+    upper: 100.0
+  dy:
+    lower: 0.0
+    upper: 100.0
+  e200:
+    lower: -100.0
+    upper: 100.0
+  
